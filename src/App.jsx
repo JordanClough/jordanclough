@@ -8,7 +8,7 @@ import SideBar from './components/SideBar.jsx';
 
 function App() {
     return(
-        <Router>
+        <Router basename='/jordanclough'>
             <div className='app'>
                 <SideBar />
                 <div className='content'>
