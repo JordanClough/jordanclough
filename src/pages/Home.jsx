@@ -2,7 +2,7 @@ import BentoBox from "../components/BentoBox";
 
 function Home(){
     const handleDownloadAndOpen = () => {
-        const resumeDestination = "/Resume_Jordan_Clough_UNFINISHED.pdf";
+        const resumeDestination = "Resume_Jordan_Clough_UNFINISHED.pdf";
         window.open(resumeDestination, "_blank");
         
         const link = document.createElement("a");
