@@ -5,12 +5,20 @@
 .preliminary-bi-palette-neutrals-3-hex-light-grey{ color: #7A7A7A; }
 .preliminary-bi-palette-neutrals-4-hex-white{ color: #FFFFFF; }
 .preliminary-bi-palette-neutrals-5-hex-dark-grey{ color: #606B73; }
+
+/* Color Theme Swatches in Hex */
+.The-Future-is-Neutral™-3D-Art-for-Renault-1-hex { color: #0D0C0D; }
+.The-Future-is-Neutral™-3D-Art-for-Renault-2-hex { color: #8C8B8C; }
+.The-Future-is-Neutral™-3D-Art-for-Renault-3-hex { color: #595859; }
+.The-Future-is-Neutral™-3D-Art-for-Renault-4-hex { color: #262626; }
+.The-Future-is-Neutral™-3D-Art-for-Renault-5-hex { color: #D9D9D9; }
+
 :root {
-  --color-black: #1d1d1d;
-  --color-beige-grey: #A69F95;
-  --color-light-grey: #7A7A7A;
-  --color-white: #FFFFFF;
-  --color-dark-grey: #606B73;
+  --color-black: #0D0C0D;
+  --color-lightest-grey: #8C8B8C;
+  --color-light-grey: #595859;
+  --color-white: #D9D9D9;
+  --color-dark-grey: #262626;
 
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,7 +39,7 @@
   height: 100vh; 
 }
 .sidebar {
-  width: 30vw;
+  width: 25vw;
   box-sizing: border-box;
   background-color: var(--color-dark-grey);
   height: 100vh;
@@ -64,12 +72,12 @@
 }
 
 .sidebar a:hover {
-  background-color: var(--color-beige-grey);
+  background-color: var(--color-light-grey);
   border-radius: 10px;
 }
 
 .sidebar a.active {
-  background-color: var(--color-light-grey);
+  background-color: var(--color-lightest-grey);
   border-radius: 10px;
 }
 
@@ -91,7 +99,7 @@
 }
 
 .content {
-  width: 70vw;
+  width: 75vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -133,7 +141,9 @@
 }
 .download-resume {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 10px 0;
+  width: 95%;
+  margin: 15px;
   background-color: var(--color-white);
   color: var(--color-black);
   border: none;
@@ -144,7 +154,60 @@
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
 }
-
+/* top | right | bottom | left */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.long-bento-box {
+  display: flex;
+  width: 90%;
+  margin: 5px;
+  padding: 0px 30px 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: var(--color-light-grey) 1px solid;
+}
+.long-bento-box h2 {
+  font-size: 2rem;
+}
+.long-bento-box p {
+  font-size: 1.2rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 10px;
+  border: var(--color-light-grey) 1px solid;
+}
+.contact-form button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 5px 0;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+.contact-form textarea {
+  height: 100px;
+}
+.contact-footer img {
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+}
 body {
   margin: 0;
   display: flex;

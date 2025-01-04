@@ -1,6 +1,17 @@
 import { NavLink } from 'react-router-dom';
 
 function SideBar() {
+    const handleDownloadAndOpen = () => {
+        const resumeDestination = "Resume_Jordan_Clough_UNFINISHED.pdf";
+        window.open(resumeDestination, "_blank");
+        
+        const link = document.createElement("a");
+        link.href = resumeDestination;
+        link.download = "Resume_Jordan_Clough_UNFINISHED.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     return (
         <header className="sidebar">
             <h1>Jordan Clough</h1>
@@ -13,6 +24,9 @@ function SideBar() {
                     <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
                 </ul>
             </nav>
+            <button onClick={handleDownloadAndOpen} className="download-resume">
+                        Download Resume
+            </button>
         </header>
     );
 }
