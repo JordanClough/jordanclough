@@ -203,11 +203,69 @@
 .contact-form textarea {
   height: 100px;
 }
-.contact-footer img {
+.contact-footer .footer-icon{
   width: 75px;
   height: 75px;
   margin: 5px;
+  filter: brightness(0) invert(1);
 }
+
+.skills {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+} 
+.hex-container {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+.skill-hex {
+  width: 173px;
+  height: 150px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: var(--color-dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  transition: .13s ease;
+  margin-left: -37px;
+}
+.skill-hex h2 {
+  font-size: 1rem;
+  transition: .1s ease;
+}
+.skill-icon {
+  margin-block-start: 20px;
+  width: 75px;
+  height: 75px;
+  transition: .1s ease;
+}
+
+.skill-hex:hover {
+  background-color: var(--color-light-grey);
+  border-radius: 10px;
+  transform: scale(1.05);
+}
+.skill-hex:hover > .skill-icon {
+  width: 80px;
+  height: 80px;
+}
+.skill-hex:hover > .skill-hex h2 {
+  font-size: 1.15rem;
+}
+.skill-hex:nth-child(even){
+  translate: 0px 87px;
+}
+
 body {
   margin: 0;
   display: flex;
