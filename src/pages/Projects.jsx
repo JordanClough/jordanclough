@@ -36,6 +36,7 @@ function Projects(){
     const [activeProject, setActiveProject] = useState(0);
     return(
         <main className="projects">
+            <h1>Projects</h1>
             <ProjectSlide 
                 title={projects[activeProject].title}
                 desc={projects[activeProject].desc}

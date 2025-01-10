@@ -2,12 +2,12 @@ import { NavLink } from 'react-router-dom';
 
 function SideBar() {
     const handleDownloadAndOpen = () => {
-        const resumeDestination = "Resume_Jordan_Clough_UNFINISHED.pdf";
+        const resumeDestination = "Resume_Jordan_Clough.pdf";
         window.open(resumeDestination, "_blank");
         
         const link = document.createElement("a");
         link.href = resumeDestination;
-        link.download = "Resume_Jordan_Clough_UNFINISHED.pdf";
+        link.download = resumeDestination;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
