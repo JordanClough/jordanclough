@@ -17,6 +17,7 @@ import sqlIcon from '../assets/skill_images/sql-icon.svg?react';
 function Skills() {
   return (
     <div className="skills">
+      <h1>SKILLS</h1>
       <div className="hex-container">
           <SkillHex label="C++" Icon={cppIcon} />
           <SkillHex label="HTML" Icon={htmlIcon} />
