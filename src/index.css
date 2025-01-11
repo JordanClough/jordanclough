@@ -123,43 +123,13 @@
   text-align: center;
   background: radial-gradient(circle at 100%, #303030, #141414 50%, #303030 75%, #141414 75%);
 }
-@media screen and (max-width: 1250px) {
-  .content {
-    width: 100vw;
-  }
-  .sidebar {
-    position: fixed;
-    width: 100%;
-    left: -100%;
-    transition: transform 0.35s ease-in-out;
-  }
-  .sidebar.open {
-    transform: translateX(100%);
-  }
-  .hamburger {
-    display: block;
-    position: fixed;
-    size: fixed;
-    padding: 20px 30px;
-    top: 20px;
-    left: 20px;
-    font-size: 3rem;
-    z-index: 101;
-    cursor: pointer;
-  }
-  .hamburger div {
-    background-color: var(--color-lightest-grey);
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-}
+
 
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   min-height: 100vh;
 }
 .home h1 {
@@ -168,8 +138,7 @@
 }
 
 .bento-container {
-  display: inline-grid;
-  overflow-y: auto;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, minmax(0, auto));
   gap: 30px;
@@ -185,7 +154,38 @@
 .bento-container .bento-box:nth-child(4) {
   grid-area:  3 / 1 / span 1 / span 2; 
 }
+@media (max-width: 700px) {
+  body {
+    overflow: hidden;
+    display: block;
+  }
+  .home{
+    display: inline;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  .home::-webkit-scrollbar {
+    display: none;
+  }
+  .bento-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    overflow: visible; 
+  }
+  .bento-container .bento-box:nth-child(1) {
+    grid-area: 1 / 1 / span 1 / span 2; 
+  }
+  .bento-container .bento-box:nth-child(2){
+    grid-area:  2 / 1 / span 2 / span 2;
+  }
+  .bento-container .bento-box:nth-child(4) {
+    grid-area:  4 / 1 / span 1 / span 2; 
+  }
+}
 .bento-box {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,7 +302,6 @@
   height: 150px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   background-color: #262626;
-  filter: drop-shadow(0 0 100px #ff0000);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,7 +339,6 @@
   translate: 0px 87px;
 }
 
-
 .projects {
   padding: 20px;
   display: flex;
@@ -356,39 +354,50 @@
 }
 .project {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0 100px;
-  margin: 20px;
+  justify-content: space-between;
   border-radius: 10px;
   border: var(--color-light-grey) 1px solid;
   color: var(--color-white);
   background-color: #141414;
   text-align: center;
-  /* Added transition for smooth effect */
-  transition: transform 0.2s ease;
+  margin: 20px;
 }
 
 .project.left .project-img {
   order: 1;
-  margin-right: 20px;
 }
-
+.project.left .project-info {
+  order: 2;
+}
 .project.right .project-img {
   order: 2;
-  margin-left: 20px;
+}
+.project.right .project-info {
+  order: 1;
 }
 
 .project-info {
   flex: 1;
+  padding: 20px;
 }
 
 .project-img {
-  width: 40%;
-  max-width: 300px;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
+}
+.project-info h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.project-info .desc {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.project-info .technologies {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 body {
   margin: 0;
@@ -397,5 +406,156 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+@media (max-width: 1250px) and (min-width: 700px) {
+  .content {
+    width: 100vw;
+  }
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    transition: transform 0.35s ease-in-out;
+  }
+  .sidebar.open {
+    transform: translateX(100%);
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    size: fixed;
+    padding: 20px 30px;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+    z-index: 101;
+    cursor: pointer;
+  }
+  .hamburger div {
+    background-color: var(--color-lightest-grey);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+}
+@media (max-width: 700px) {
+  .hamburger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  .hamburger div {
+    background-color: var(--color-lightest-grey);
+  }
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    margin-top: 20px;
+    transition: transform 0.35s ease-in-out;
+  }
+  .sidebar.open {
+    transform: translateX(100%);
+  }
+  .content {
+    width: 100vw;
+  }
+  .skills {
+    margin-top: 0px;
+  }
+  .skills h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  .hex-container {
+    scale: 0.6;
+  }
+  .skill-hex:hover {
+    transform: none;
+  }
+  .skill-hex:focus {
+    transform: none;
+  }
+
+  .sk
+  .skill-hex,
+  .skill-icon,
+  .bento-box,
+  .projects-list,
+  .project-img,
+  .download-resume,
+  .active,
+  nav ul li a,
+  nav ul li a:focus,
+  nav ul li a:hover,
+  button,
+  a {
+    transition: none !important;
+  }
+  .project{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project-img {
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .project.left .project-img {
+    order: 2;
+  }
+  .project.left .project-info {
+    order: 1;
+  }
+  .project.right .project-img {
+    order: 2;
+    padding: auto;
+  }
+  .project.right .project-info {
+    order: 1;
+  }
+  .project li {
+    text-decoration: none;
+  }
+  .project ul {
+    padding-left: 5px;    
+    margin: 10px;        
+  }
+  .contact{
+    overflow-y: auto;
+    display: flex;
+    margin-top: 30px;
+  }
+  .contact h1{
+    font-size: 2rem;
+  }
+  .long-bento-box{
+    width: 75%;
+  }
+  .long-bento-box h2{
+    font-size: 1.5rem;
+  }
+  .contact-form{
+    width: 75%;
+  }
+  .contact-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .contact-footer .footer-icon {
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+  }
+  .download-resume {
+    margin-bottom: 30px;
+  }
 }
 

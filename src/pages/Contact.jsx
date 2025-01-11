@@ -50,7 +50,7 @@ function Contact(){
                 <a href="https://github.com/JordanClough" target="_blank" rel="noreferrer">
                     <GithubIcon className="footer-icon"/>
                 </a>
-                <a href="www.linkedin.com/in/jordan-clough101" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/jordan-clough101" target="_blank" rel="noreferrer">
                     <LinkedinIcon className="footer-icon"/>
                 </a>
             </footer>
