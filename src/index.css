@@ -556,6 +556,7 @@ body {
   }
   .download-resume {
     margin-bottom: 30px;
+    position: relative; 
   }
 }
 
