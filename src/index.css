@@ -167,10 +167,6 @@
   margin-bottom: 10px;
 }
 
-.colourGradient{
-  background: linear-gradient(90deg, #b6263e 0%, #ff4665 25%, #FFC0CB 50%, #FFC0CB 75%, #FFC0CB 100%);
-}
-
 .bento-container {
   display: inline-grid;
   overflow-y: auto;
@@ -233,7 +229,7 @@
   font-size: 2rem;
 }
 .long-bento-box p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .contact-form {
   display: flex;
@@ -244,6 +240,7 @@
   border-radius: 10px;
   background-color: #141414;
   border: var(--color-light-grey) 1px solid;
+  font-size: 1.3rem;
 }
 .contact-form button {
   width: 100%;
@@ -257,7 +254,16 @@
   text-decoration: none;
   font-weight: bold;
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+.contact-form input, .contact-form textarea {
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-light-grey);
+  color: var(--color-white);
+  font-size: 1.1rem;
 }
 .contact-form textarea {
   height: 100px;
