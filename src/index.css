@@ -501,10 +501,10 @@ body {
   .project{
     flex-direction: column;
     justify-content: center;
+    margin: 15px 0px;
   }
   .project-img {
-    border-radius: 20px;
-    padding: 10px;
+    max-width: 100%;
   }
   .project.left .project-img {
     order: 2;
