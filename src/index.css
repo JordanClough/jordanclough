@@ -36,6 +36,18 @@
 .app {
   display: flex;
 }
+.app button {
+  font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-lightest-grey);
+}
 .sidebar {
   width: 25vw;
   box-sizing: border-box;
@@ -134,7 +146,7 @@
 }
 .home h1 {
   font-size: 3rem;
-  margin: 10px;
+  margin: 20px;
 }
 
 .bento-container {
