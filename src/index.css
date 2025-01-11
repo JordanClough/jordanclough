@@ -344,8 +344,16 @@
 .projects {
   padding: 20px;
   display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
-
+.projects::-webkit-scrollbar {
+  display: none;
+}
+.projects h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 .project {
   display: flex;
   flex-direction: column;

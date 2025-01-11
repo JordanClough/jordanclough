@@ -29,7 +29,7 @@ function Projects(){
     ];
     return(
         <main className="projects">
-            <h1>Projects</h1>
+            <h1>PROJECTS</h1>
             <div className="projects-list">
                 {projects.map((project, index) => (
                     <div key={index} className={`project ${index % 2 === 0 ? "left" : "right"}`}>
