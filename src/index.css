@@ -554,6 +554,9 @@ body {
     height: 45px;
     margin: 10px;
   }
+  .sidebar{
+    height: 100%;
+  }
   .download-resume {
     margin-bottom: 30px;
     position: relative; 
