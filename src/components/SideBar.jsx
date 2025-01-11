@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-function SideBar() {
+function SideBar({ className }) {
     const handleDownloadAndOpen = () => {
         const resumeDestination = "Resume_Jordan_Clough.pdf";
         window.open(resumeDestination, "_blank");
@@ -13,7 +13,7 @@ function SideBar() {
         document.body.removeChild(link);
     }
     return (
-        <header className="sidebar">
+        <header className={`sidebar ${className}`}>
             <h1>Jordan Clough</h1>
             <h2>Software Developer</h2>
             <nav>

@@ -44,9 +44,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 101;
 }
 
-
+.hamburger {
+  display: none;
+}
 .sidebar nav {
   width: 100%;
   flex: 1;
@@ -80,26 +83,26 @@
 }
 
 .sidebar li {
-  font-size: 1.2rem;
+  font-size: 2rem;
   padding: 10px 0;
   width: 100%;
   text-align: center;
   border-radius: 10px;
 }
 .sidebar h1 {
-  font-size: 2.4rem;
+  font-size: 3rem;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 .sidebar h2 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-top: 0px;
 }
 .download-resume {
   display: inline-block;
-  padding: 10px 0;
+  padding: 20px 10px;
   width: 95%;
-  margin: 15px;
+  margin: 20px;
   background-color: var(--color-white);
   color: var(--color-black);
   border: none;
@@ -108,7 +111,7 @@
   text-decoration: none;
   font-weight: bold;
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 .content {
   width: 75vw;
@@ -120,6 +123,35 @@
   text-align: center;
   background: radial-gradient(circle at 100%, #303030, #141414 50%, #303030 75%, #141414 75%);
 }
+@media screen and (max-width: 1250px) {
+  .content {
+    width: 100vw;
+  }
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    transition: transform 0.35s ease-in-out;
+  }
+  .sidebar.open {
+    transform: translateX(100%);
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    padding: 20px;
+    top: 20px;
+    left: 20px;
+    z-index: 101;
+    cursor: pointer;
+  }
+  .hamburger div {
+    background-color: var(--color-lightest-grey);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
 .home {
   display: flex;
   flex-direction: column;
