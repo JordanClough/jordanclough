@@ -36,7 +36,7 @@
 .app {
   display: flex;
 }
-.app button {
+.app .hamburger button {
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -52,7 +52,7 @@
   width: 25vw;
   box-sizing: border-box;
   background-color: var(--color-dark-grey);
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +116,7 @@
   width: 95%;
   margin: 20px;
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   border: none;
   border-radius: 15px;
   cursor: pointer;
