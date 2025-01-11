@@ -36,7 +36,8 @@
 .app {
   display: flex;
 }
-.app .hamburger button {
+.hamburger {
+  display: none;
   font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -59,9 +60,6 @@
   z-index: 101;
 }
 
-.hamburger {
-  display: none;
-}
 .sidebar nav {
   width: 100%;
   flex: 1;

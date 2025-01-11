@@ -33,7 +33,7 @@ function App() {
             <div ref={sidebarRef}>
                 <SideBar className={menuOpen ? "open" : ""} />
             </div>
-            <button className="hamburger" onClick={toggleMenu}>
+            <button className='hamburger' onClick={toggleMenu}>
                 {menuOpen ? "✕" : "☰"}
             </button>
             <div className='content'>
