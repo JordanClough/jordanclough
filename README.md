@@ -1,4 +1,4 @@
-# Jordan Clough — Portfolio
+# Jordan Clough · Portfolio
 
 Personal portfolio for Jordan Clough, software developer. React + TypeScript + Vite + Tailwind v4, deployed to GitHub Pages.
 
@@ -8,7 +8,7 @@ Personal portfolio for Jordan Clough, software developer. React + TypeScript + V
 - **Vite 6** with `@vitejs/plugin-react` and `vite-plugin-svgr` (`?react` SVG imports)
 - **Tailwind CSS v4** via `@tailwindcss/vite`
 - **react-router-dom** with `HashRouter` (deep links work on GitHub Pages)
-- No backend — contact uses `mailto:` / `tel:` plus copy-to-clipboard
+- No backend: contact uses `mailto:` / `tel:` plus copy-to-clipboard
 
 ## Scripts
 

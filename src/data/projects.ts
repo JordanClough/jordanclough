@@ -47,7 +47,7 @@ export const projects: Project[] = [
     slug: "portfolio-website",
     title: "Personal Portfolio Website",
     description:
-      "The site you are viewing — a responsive portfolio for projects and skills.",
+      "The site you are viewing: a responsive portfolio for projects and skills.",
     accomplishments: [
       "Designed an iterative, responsive layout for desktop and mobile.",
       "Built reusable React components for modularity and scale.",

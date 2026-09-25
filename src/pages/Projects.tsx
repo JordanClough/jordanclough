@@ -27,8 +27,8 @@ export default function Projects() {
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 py-12">
-      <Seo title="Projects — Jordan Clough" description="ML, iOS, web, and database projects by Jordan Clough." />
-      <h1 className="text-4xl font-bold">Projects</h1>
+      <Seo title="Projects · Jordan Clough" description="ML, iOS, web, and database projects by Jordan Clough." />
+      <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
       <p className="mt-2 text-[#bdbdbd]">{filtered.length} of {projects.length} shown</p>
 
       <div className="mt-6 flex flex-col gap-3 md:flex-row">
@@ -37,13 +37,13 @@ export default function Projects() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search projects or tech…"
           aria-label="Search projects"
-          className="w-full rounded-xl border border-[#3a3a3a] bg-[#141414] px-4 py-3 outline-none placeholder:text-[#777] focus:border-[#777]"
+          className="w-full rounded-xl border border-white/[0.07] bg-[#141414] px-4 py-3 outline-none transition-colors placeholder:text-[#777] focus:border-sky-400/50"
         />
         <select
           value={tech}
           onChange={(e) => setTech(e.target.value)}
           aria-label="Filter by technology"
-          className="rounded-xl border border-[#3a3a3a] bg-[#141414] px-4 py-3"
+          className="rounded-xl border border-white/[0.07] bg-[#141414] px-4 py-3 outline-none transition-colors focus:border-sky-400/50"
         >
           {allTech.map((t) => (
             <option key={t} value={t}>{t}</option>

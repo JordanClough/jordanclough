@@ -22,7 +22,7 @@ h2{font-size:13px;color:#38bdf8;margin:28px 0 10px;border-bottom:1px solid #2a2a
 .cell{background:#171717;border:1px solid #2e2e2e;border-radius:10px;padding:8px}
 .cell img{display:block;width:270px;height:auto;border-radius:6px}
 .cap{font-size:11px;color:#9a9a9a;margin-top:6px;text-align:center}
-</style></head><body><h1>Portfolio review — every viewport</h1>`;
+</style></head><body><h1>Portfolio review: every viewport</h1>`;
 
 for (const k of order) {
   if (!groups[k]) continue;

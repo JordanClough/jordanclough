@@ -41,13 +41,13 @@ function Media({ project }: { project: Project }) {
   }
 
   return (
-    <div className="min-h-56 bg-black/30">
+    <div className="min-h-56 overflow-hidden bg-black/30">
       <img
         src={project.image}
         alt={project.imageAlt ?? project.title}
         loading="lazy"
         decoding="async"
-        className="aspect-video h-full w-full object-cover md:aspect-auto md:min-h-72"
+        className="aspect-video h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.05] md:aspect-auto md:min-h-72"
       />
     </div>
   );
@@ -56,22 +56,29 @@ function Media({ project }: { project: Project }) {
 export default function ProjectCard({ project, flip }: { project: Project; flip: boolean }) {
   return (
     <article
-      className={`animate-rise grid gap-0 overflow-hidden rounded-2xl border border-[#3a3a3a] bg-[#141414] md:grid-cols-2 ${
+      className={`animate-rise group grid gap-0 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#141414] transition-[border-color,box-shadow] duration-200 hover:border-sky-400/25 hover:shadow-xl hover:shadow-black/40 md:grid-cols-2 ${
         flip ? "md:[&>*:first-child]:order-2" : ""
       }`}
     >
       <Media project={project} />
-      <div className="p-6 text-left">
-        <h2 className="text-2xl font-bold">{project.title}</h2>
+      <div className="p-6 text-left md:p-8">
+        <h2 className="text-2xl font-bold tracking-tight">{project.title}</h2>
         <p className="mt-2 font-medium text-[#cfcfcf]">{project.description}</p>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-[#bdbdbd]">
           {project.accomplishments.map((a) => (
             <li key={a}>{a}</li>
           ))}
         </ul>
-        <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-sky-300/90">
-          {project.technologies.join(" · ")}
-        </p>
+        <ul className="mt-5 flex flex-wrap gap-2">
+          {project.technologies.map((t) => (
+            <li
+              key={t}
+              className="rounded-full border border-sky-400/20 bg-sky-400/[0.08] px-2.5 py-1 text-xs font-medium text-sky-200"
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
       </div>
     </article>
   );

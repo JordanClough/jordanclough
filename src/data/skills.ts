@@ -17,20 +17,21 @@ import GitIcon from "../assets/skill_images/git-icon.svg?react";
 export interface Skill {
   label: string;
   Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  color?: string;
 }
 
 export const skills: Skill[] = [
   { label: "TypeScript", Icon: TsIcon },
   { label: "JavaScript", Icon: JsIcon },
   { label: "React", Icon: ReactIcon },
-  { label: "HTML", Icon: HtmlIcon },
-  { label: "CSS", Icon: CssIcon },
+  { label: "HTML", Icon: HtmlIcon, color: "#e34f26" },
+  { label: "CSS", Icon: CssIcon, color: "#2965f1" },
   { label: "Swift", Icon: SwiftIcon },
   { label: "Python", Icon: PythonIcon },
   { label: "Java", Icon: JavaIcon },
   { label: "C++", Icon: CppIcon },
   { label: "C", Icon: CIcon },
-  { label: "SQL", Icon: SqlIcon },
+  { label: "SQL", Icon: SqlIcon, color: "#7dd3fc" },
   { label: "MATLAB", Icon: MatlabIcon },
-  { label: "Git", Icon: GitIcon },
+  { label: "Git", Icon: GitIcon, color: "#e6e6e6" },
 ];
